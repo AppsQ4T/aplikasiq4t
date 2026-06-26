@@ -1,0 +1,182 @@
+.draggame-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: sans-serif;
+  background-color: #f4f9f4;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #1a5c2a;
+  text-align: center;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+.instruction {
+  text-align: center;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.arabic {
+  background-color: #1a5c2a;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  direction: rtl;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  line-height: 2.2;
+}
+
+.drop-question {
+  margin-bottom: 1.2rem;
+}
+
+.question {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* KOTAK DROP */
+.drop-zone {
+  background-color: #c8e6c9;
+  border: 2px dashed #388e3c;
+  border-radius: 8px;
+  min-height: 48px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+
+.drop-zone.filled {
+  background-color: #e8f5e9;
+  border-style: solid;
+  border-color: #2e7d32;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+/* SELEPAS SEMAK */
+.drop-zone.correct {
+  background-color: #a5d6a7;
+  border-color: #1b5e20;
+}
+
+.drop-zone.wrong {
+  background-color: #ffcdd2;
+  border-color: #c62828;
+  color: #b71c1c;
+}
+
+.placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+/* PILIHAN JAWAPAN */
+.choices-pool {
+  margin-top: 1.5rem;
+}
+
+.pool-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  background-color: #1a5c2a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: grab;
+  font-size: 14px;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+
+.chip.used {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* RESULT MESSAGE */
+.result-msg {
+  margin-top: 1rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.result-msg.correct {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.result-msg.wrong {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+/* BUTTON */
+.submit-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  background-color: #1a5c2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #145220;
+}
+
+.back-btn {
+  display: block;
+  margin: 1rem auto 0;
+  background: none;
+  border: 1px solid #1a5c2a;
+  color: #1a5c2a;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #e8f5e9;
+}

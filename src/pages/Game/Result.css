@@ -1,0 +1,138 @@
+.result-page {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f4f9f4;
+  min-height: 100vh;
+}
+
+.trophy {
+  font-size: 64px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a5c2a;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 2rem;
+}
+
+/* SCORE CARD */
+.score-card {
+  background-color: #1a5c2a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.score-label {
+  font-size: 13px;
+  color: #a5d6a7;
+  margin: 0 0 6px;
+}
+
+.score-num {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+}
+
+.score-total {
+  font-size: 22px;
+  color: #c8e6c9;
+}
+
+.grade-badge {
+  display: inline-block;
+  background: #fff;
+  color: #1a5c2a;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+
+/* STATS ROW */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  background: #fff;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 14px 8px;
+}
+
+.stat-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a5c2a;
+  margin: 0 0 4px;
+}
+
+.stat-val.correct { color: #2e7d32; }
+.stat-val.wrong   { color: #c62828; }
+
+.stat-lbl {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+/* MESSAGE */
+.msg-box {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+  color: #1b5e20;
+  text-align: left;
+}
+
+/* BUTTONS */
+.submit-btn {
+  display: block;
+  width: 100%;
+  background: #1a5c2a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.submit-btn:hover { background: #145220; }
+
+.back-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  color: #1a5c2a;
+  border: 1.5px solid #1a5c2a;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.back-btn:hover { background: #e8f5e9; }
