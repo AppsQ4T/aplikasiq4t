@@ -12,69 +12,81 @@ function DragGameP() {
   const questions = [
     {
       instruction: "Soalan 5: Susunkan cara membaca istia'zah dan basmalah di awal surah jika ingin memutuskan semua bahagian.",
-      arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١",
-      items: [
-        { id: "a", text: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ" },
-        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ" },
-        { id: "c", text: "وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١" },
+      choices: [
+        { id: "c", text: "وَٱلَّيۡلِ إِذَا يَغۡشَىٰ(١)" },
+        { id: "a", text: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ." },
+        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ." },
+        
       ],
       answer: ["a", "b", "c"],
     },
     {
       instruction: "Soalan 6: Susunkan cara membaca istia'zah dan basmalah di awal surah jika ingin menyambungkan basmalah dengan ayat pertama surah.",
-      arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١",
-      items: [
-        { id: "a", text: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ" },
-        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١" },
+      choices: [
+          { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ" },
+        { id: "a", text: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ." },
+        { id: "c", text: " وَٱلَّيۡلِ إِذَا يَغۡشَىٰ(١)" },
       ],
-      answer: ["a", "b"],
+      answer: ["a", "b", "c"],
     },
     {
       instruction: "Soalan 7: Susunkan cara bacaan basmalah antara dua surah jika ingin menyambungkan ayat terakhir surah sebelumnya, basmalah, dan permulaan surah baharu.",
-      arabic: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ١١ بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١",
-      items: [
-        { id: "a", text: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١" },
+      choices: [
+        { id: "a", text: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ  " },
+        { id: "c", text: "  وَٱلَّيۡلِ إِذَا يَغۡشَىٰ(١) " },
+        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ" },
       ],
-      answer: ["a"],
+      answer: ["a", "b", "c"],
     },
     {
       instruction: "Soalan 8: Susunkan cara bacaan basmalah antara dua surah jika ingin memutuskan ayat terakhir surah sebelumnya, dan menyambungkan basmalah dengan permulaan surah baharu.",
-      arabic: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ١١ بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١",
-      items: [
-        { id: "a", text: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ١١" },
-        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ وَٱلَّيۡلِ إِذَا يَغۡشَىٰ١" },
+      choices: [
+        { id: "b", text: "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ " },
+        { id: "c", text: "وَٱلَّيۡلِ إِذَا يَغۡشَىٰ (١)" },
+                { id: "a", text: "وَأَمَّا بِنِعۡمَةِ رَبِّكَ فَحَدِّثۡ(١١)" },
       ],
-      answer: ["a", "b"],
+      answer: ["a", "b", "c"],
     },
   ];
 
   const [currentQ, setCurrentQ] = useState(0);
-  const [arranged, setArranged] = useState([]);
-  const [pool, setPool] = useState([...questions[0].items]);
+  const [dropZones, setDropZones] = useState({ 0: null, 1: null, 2: null });
+  const [dragging, setDragging] = useState(null);
   const [checked, setChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [score, setScore] = useState(prevScore);
 
   const q = questions[currentQ];
+  const usedIds = Object.values(dropZones).filter(Boolean).map((v) => v.id);
+  const pool = q.choices.filter((c) => !usedIds.includes(c.id));
 
-  function addToArranged(item) {
-    if (checked) return;
-    setArranged((prev) => [...prev, item]);
-    setPool((prev) => prev.filter((i) => i.id !== item.id));
+  function handleDragStart(choice) {
+    setDragging(choice);
   }
 
-  function removeFromArranged(item) {
+  function handleDrop(zoneIndex) {
+    if (!dragging || checked) return;
+
+    // Kalau zone dah ada isi, kembalikan ke pool
+    const existing = dropZones[zoneIndex];
+    setDropZones((prev) => ({ ...prev, [zoneIndex]: dragging }));
+    setDragging(null);
+  }
+
+  function handleRemove(zoneIndex) {
     if (checked) return;
-    setPool((prev) => [...prev, item]);
-    setArranged((prev) => prev.filter((i) => i.id !== item.id));
+    setDropZones((prev) => ({ ...prev, [zoneIndex]: null }));
   }
 
   function checkAnswers() {
-    if (arranged.length !== q.answer.length) {
-      alert("Sila susun semua bahagian dahulu.");
-      return;
-    }
-    const correct = arranged.every((item, i) => item.id === q.answer[i]);
+    const allFilled = Object.values(dropZones).every((v) => v !== null);
+    if (!allFilled) { alert("Sila isi semua kotak dahulu."); return; }
+
+    const correct =
+      dropZones[0]?.id === q.answer[0] &&
+      dropZones[1]?.id === q.answer[1] &&
+      dropZones[2]?.id === q.answer[2];
+
     setIsCorrect(correct);
     if (correct) setScore((s) => s + 1);
     setChecked(true);
@@ -82,12 +94,11 @@ function DragGameP() {
 
   function nextQuestion() {
     if (currentQ < questions.length - 1) {
-      const next = currentQ + 1;
-      setCurrentQ(next);
-      setArranged([]);
-      setPool([...questions[next].items]);
+      setCurrentQ((c) => c + 1);
+      setDropZones({ 0: null, 1: null, 2: null });
       setChecked(false);
       setIsCorrect(false);
+      setDragging(null);
     } else {
       navigate("/resultP", { state: { score, total: 8 } });
     }
@@ -107,42 +118,53 @@ function DragGameP() {
           Soalan {currentQ + 5} / 8
         </div>
 
-        <div className="arabic">{q.arabic}</div>
-
         <p className="instruction">{q.instruction}</p>
 
-        {/* KAWASAN SUSUN URUTAN */}
-        <div className="arrange-zone">
-          <p className="zone-label">Susunan kamu:</p>
-          {arranged.length === 0 ? (
-            <p className="placeholder">Klik ayat di bawah untuk susun...</p>
-          ) : (
-            arranged.map((item, i) => (
+        {/* DROP ZONES — 3 kotak bernombor */}
+        <div className="dropzones">
+          <p className="zone-label">Susun jawapan:</p>
+          {[0, 1, 2].map((i) => {
+            const val = dropZones[i];
+            const isZoneCorrect = checked ? val?.id === q.answer[i] : null;
+
+            return (
               <div
-                key={item.id}
-                className={`arranged-item ${checked ? (isCorrect ? "correct" : "wrong") : ""}`}
-                onClick={() => removeFromArranged(item)}
+                key={i}
+                className={`dropzone ${val ? "filled" : ""} ${
+                  checked ? (isZoneCorrect ? "correct" : "wrong") : ""
+                }`}
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={() => handleDrop(i)}
               >
-                <span className="arrange-num">{i + 1}.</span>
-                <span className="arrange-text">{item.text}</span>
-                {!checked && <span className="remove-x">✕</span>}
+                <span className="zone-num">{i + 1}.</span>
+                {val ? (
+                  <div className="zone-content">
+                    <span className="zone-text">{val.text}</span>
+                    {!checked && (
+                      <button className="remove-btn" onClick={() => handleRemove(i)}>✕</button>
+                    )}
+                  </div>
+                ) : (
+                  <span className="placeholder">Lepaskan ayat di sini...</span>
+                )}
               </div>
-            ))
-          )}
+            );
+          })}
         </div>
 
-        {/* POOL PILIHAN */}
-        {pool.length > 0 && (
+        {/* POOL — pilihan ayat berselerak */}
+        {pool.length > 0 && !checked && (
           <div className="pool-zone">
-            <p className="zone-label">Pilihan:</p>
+            <p className="zone-label">Pilihan ayat:</p>
             <div className="pool-items">
-              {pool.map((item) => (
+              {pool.map((choice) => (
                 <div
-                  key={item.id}
+                  key={choice.id}
                   className="pool-item"
-                  onClick={() => addToArranged(item)}
+                  draggable
+                  onDragStart={() => handleDragStart(choice)}
                 >
-                  {item.text}
+                  {choice.text}
                 </div>
               ))}
             </div>
@@ -153,7 +175,7 @@ function DragGameP() {
           <div className={`result-msg ${isCorrect ? "betul" : "salah"}`}>
             {isCorrect
               ? "✅ Tahniah! Susunan anda BETUL."
-              : "❌ Susunan SALAH. Cuba perhatikan semula."}
+              : "❌ Susunan SALAH. Kotak merah = urutan salah."}
           </div>
         )}
 

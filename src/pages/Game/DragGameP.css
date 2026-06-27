@@ -51,17 +51,6 @@
   align-self: center;
 }
 
-.arabic {
-  background: #1a5c2a;
-  color: white;
-  font-size: 18px;
-  direction: rtl;
-  padding: 16px;
-  border-radius: 12px;
-  text-align: center;
-  line-height: 2;
-}
-
 .instruction {
   font-size: 14px;
   color: #333;
@@ -77,68 +66,78 @@
   margin: 0 0 8px 0;
 }
 
-/* KAWASAN SUSUN */
-.arrange-zone {
+/* DROP ZONES */
+.dropzones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: #f1f8f1;
   border: 2px dashed #0f9444;
   border-radius: 12px;
-  padding: 14px;
-  min-height: 60px;
+  padding: 12px 14px;
+  min-height: 52px;
+  transition: background 0.2s;
+}
+
+.dropzone.filled {
+  background: #e8f5e9;
+  border-style: solid;
+}
+
+.dropzone.correct {
+  background: #c8e6c9;
+  border-color: #2e7d32;
+}
+
+.dropzone.wrong {
+  background: #ffcdd2;
+  border-color: #c62828;
+}
+
+.zone-num {
+  font-weight: 700;
+  color: #0f5c2a;
+  font-size: 15px;
+  min-width: 24px;
+  flex-shrink: 0;
+}
+
+.zone-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 8px;
+}
+
+.zone-text {
+  font-size: 15px;
+  direction: rtl;
+  line-height: 1.8;
+  flex: 1;
+  text-align: right;
 }
 
 .placeholder {
   color: #aaa;
   font-size: 13px;
-  margin: 0;
-  text-align: center;
 }
 
-.arranged-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  background: #e8f5e9;
-  border: 1.5px solid #0f9444;
-  border-radius: 10px;
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-  direction: rtl;
-  text-align: right;
-}
-
-.arranged-item:last-child { margin-bottom: 0; }
-
-.arranged-item.correct {
-  background: #c8e6c9;
-  border-color: #2e7d32;
-}
-
-.arranged-item.wrong {
-  background: #ffcdd2;
-  border-color: #c62828;
-}
-
-.arrange-num {
-  font-weight: 700;
-  color: #0f5c2a;
-  font-size: 14px;
-  min-width: 20px;
-  direction: ltr;
-}
-
-.arrange-text {
-  font-size: 15px;
-  line-height: 1.8;
-  flex: 1;
-}
-
-.remove-x {
-  color: #c62828;
-  font-size: 14px;
-  margin-left: auto;
-  direction: ltr;
+.remove-btn {
+  background: none !important;
+  border: none !important;
+  color: #c62828 !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  padding: 0 !important;
+  width: auto !important;
+  flex-shrink: 0;
 }
 
 /* POOL */
@@ -160,12 +159,13 @@
   color: white;
   padding: 12px 16px;
   border-radius: 10px;
-  cursor: pointer;
+  cursor: grab;
   font-size: 14px;
   direction: rtl;
   text-align: right;
   line-height: 1.8;
   transition: 0.2s;
+  user-select: none;
 }
 
 .pool-item:hover {
