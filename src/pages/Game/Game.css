@@ -1,73 +1,196 @@
-.game-page{
-
-display:flex;
-flex-direction:column;
-align-items:center;
-padding:40px;
-min-height:100vh;
-background:#eef7ef;
-
+.game-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
 }
 
-.game-page h1{
-
-color:#0b7a39;
-
+.game-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.instruction{
-
-font-size:20px;
-margin-top:20px;
-
+.game-logo {
+  width: 70px;
+  height: auto;
 }
 
-.arabic{
-
-font-size:40px;
-margin:30px;
-direction:rtl;
-
+.game-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
 }
 
-.question{
-
-font-size:22px;
-text-align:center;
-max-width:800px;
-margin-bottom:30px;
-
+.game-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-label{
-
-font-size:22px;
-margin:10px;
-
+.soalan-badge {
+  background: #0f9444;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 20px;
 }
 
-.submit-btn{
-
-margin-top:30px;
-padding:12px 30px;
-font-size:18px;
-background:#0b7a39;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;
-
+.arabic {
+  background: #1a5c2a;
+  color: white;
+  font-size: 28px;
+  direction: rtl;
+  padding: 16px 20px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 2;
 }
 
-.back-btn{
+.question {
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
 
-margin-top:20px;
-padding:12px 30px;
-font-size:18px;
-background:#444;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;
+.radio-group {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
 
+.radio-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border: 2px solid #c8e6c9;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+  background: #f9f9f9;
+}
+
+.radio-card input {
+  display: none;
+}
+
+.radio-card.selected {
+  border-color: #0f9444;
+  background: #e8f5e9;
+  color: #0f5c2a;
+}
+
+.radio-card:hover {
+  border-color: #0f9444;
+  background: #f1f8f1;
+}
+
+.result-msg {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.result-msg.betul {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.result-msg.salah {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+.submit-btn {
+  width: 100% !important;
+  background: #0f9444 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+}
+
+.submit-btn:hover {
+  background: #0a6d35 !important;
+}
+
+.score-display {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.back-btn {
+  display: inline-block !important;
+  width: fit-content !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 10px 40px !important;
+  background: transparent;
+  border: 2px solid #0b7a39;
+  color: #0b7a39;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #0b7a39;
+  color: white;
+}
+
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
 }

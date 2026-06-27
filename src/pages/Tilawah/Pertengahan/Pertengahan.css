@@ -1,0 +1,137 @@
+.pertengahan-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 0 20px;
+  box-sizing: border-box;
+}
+
+.pertengahan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pertengahan-logo {
+  width: 100px;
+  height: auto;
+}
+
+.pertengahan-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #000000;
+  letter-spacing: 2px;
+}
+
+.pertengahan-page h3 {
+  margin: 0 0 12px 0;
+  color: #0f5c2a;
+  font-size: 16px;
+}
+
+.pertengahan-page select {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #0f9444;
+  margin-bottom: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* GRID 2x2 */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* BESARKAN button menu */
+.menu-btn {
+  height: 120px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  background: #0b7a39;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(11, 122, 57, 0.3);
+}
+
+/* GLOW KUNING */
+.menu-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(11, 122, 57, 0.5),
+              0 0 20px #ffe600,
+              0 0 40px #ffe600;
+}
+
+.menu-btn:active {
+  transform: translateY(0);
+}
+
+.back-btn {
+  display: inline-block !important;
+  width: fit-content !important;
+  padding: 10px 40px !important;
+  margin-top: 24px;
+  margin-bottom: 60px; /* ← tambah ni, besarkan kalau nak lagi jauh */
+  background: transparent;
+  border: 2px solid #0b7a39;
+  color: #0b7a39;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 15px rgba(15,148,68,.5);
+
+}
+.back-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+/* BOTTOM NAV */
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+}
+
+.bottom-nav svg {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+}

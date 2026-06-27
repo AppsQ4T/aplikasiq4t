@@ -1,0 +1,234 @@
+.about-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.about-logo {
+  width: 70px;
+  height: auto;
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
+}
+
+/* SECTION BOX */
+.about-section {
+  background: rgba(255,255,255,0.93);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  font-size: 16px;
+  color: #0f5c2a;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #c8e6c9;
+}
+
+.about-section p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-section ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.about-section ul li {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* MEMBER CARD */
+.member-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+.member-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.member-card.ketua {
+  background: #f1f8f1;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 8px;
+  border-bottom: none;
+}
+
+.member-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0f9444;
+  flex-shrink: 0;
+}
+
+.member-card.ketua .member-img {
+  width: 90px;
+  height: 90px;
+  border-color: #0f5c2a;
+  border-width: 4px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.role-badge {
+  display: inline-block;
+  background: #0f9444;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.member-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f5c2a;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.member-uni {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.member-expertise {
+  font-size: 12px;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+.team-group {
+  margin-bottom: 24px;
+}
+
+.team-role-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f5c2a;
+  text-align: center;
+  margin: 0 0 16px 0;
+  letter-spacing: 1px;
+}
+
+.member-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+.member-portrait:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.portrait-img {
+  width: 200px;
+  height: 300px;    /* ← naikkan dari 240px */
+  object-fit: cover;
+  object-position: center top;  /* ← tukar ke center top */
+  margin-bottom: 12px;
+}
+
+.portrait-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 4px 0;
+}
+
+.portrait-uni {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 4px 0;
+  line-height: 1.5;
+}
+
+.portrait-expertise {
+  font-size: 13px;
+  color: #444;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-section ul li {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  text-align: justify;  /* ← tambah ni */
+}

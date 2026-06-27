@@ -1,0 +1,94 @@
+.ask-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+.ask-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.ask-logo {
+  width: 70px;
+  height: auto;
+}
+
+.ask-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.ask-card {
+  background: rgba(255,255,255,0.93);
+  border-radius: 16px;
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.ask-desc {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+}
+
+.ask-link-btn {
+  display: inline-block;
+  background: #0f9444;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s;
+  box-shadow: 0 4px 12px rgba(15,148,68,0.3);
+}
+
+.ask-link-btn:hover {
+  background: #0a6d35;
+  transform: translateY(-2px);
+}
+
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
+}

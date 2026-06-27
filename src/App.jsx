@@ -12,7 +12,14 @@ import Enota from "./pages/Enota/Enota";
 import Game from "./pages/Game/Game";
 import DragGame from "./pages/Game/DragGame";
 import Result   from "./pages/Game/Result";
-
+import About from "./pages/About/About";
+import Help from "./pages/Help/Help";
+import AskExpert from "./pages/AskExpert/AskExpert";
+import GameP from "./pages/Game/GameP";
+import DragGameP from "./pages/Game/DragGameP";
+import GameL from "./pages/Game/GameL";
+import ResultP from "./pages/Game/ResultP";
+import ResultL from "./pages/Game/ResultL";
 
 
 function App() {
@@ -35,6 +42,14 @@ function App() {
   <Route path="/game" element={<Game />} />
 <Route path="draggame"  element={<DragGame />} />
 <Route path="/result"    element={<Result />} />
+<Route path="/about" element={<About />} />
+<Route path="/help" element={<Help />} />
+<Route path="/askexpert" element={<AskExpert />} />
+<Route path="/gameP" element={<GameP />} />
+<Route path="/draggameP" element={<DragGameP />} />
+<Route path="/gameL" element={<GameL />} />
+<Route path="/resultP" element={<ResultP />} />
+<Route path="/resultL" element={<ResultL />} />
 
 
 </Routes>

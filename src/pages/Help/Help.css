@@ -1,0 +1,120 @@
+.help-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+.help-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.help-logo {
+  width: 70px;
+  height: auto;
+}
+
+.help-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
+}
+
+.help-section {
+  background: rgba(255,255,255,0.93);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.help-section h2 {
+  font-size: 16px;
+  color: #0f5c2a;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c8e6c9;
+}
+
+/* STEP CARD */
+.step-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+.step-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.step-num {
+  min-width: 36px;
+  height: 36px;
+  background: #0f9444;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 6px 0 0 0;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+.step-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 6px 0 0 0;
+  text-align: justify;  /* ← tambah ni */
+}

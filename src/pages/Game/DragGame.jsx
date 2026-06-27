@@ -1,6 +1,8 @@
 import "./DragGame.css";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { FaBookOpen, FaInfoCircle, FaQuestionCircle, FaHome } from "react-icons/fa";
+import logo from "../../images/logo.png";
 
 function DragGame() {
   const navigate = useNavigate();
@@ -8,86 +10,51 @@ function DragGame() {
   const prevScore = location.state?.score || 0;
 
   const questions = [
-    // SOALAN 4
     {
-      arabic: "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ۝ مَلِكِ ٱلنَّاسِ ۝ إِلَٰهِ ٱلنَّاسِ ۝ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ",
+      arabic: "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ(١) مَلِكِ ٱلنَّاسِ(٢) إِلَٰهِ ٱلنَّاسِ(٣) مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ(٤)",
       items: [
-        {
-          id: "q1",
-          label: "1. Nun bertasydid (نّ) dalam kalimah ٱلنَّاسِ dibaca dengan cara:",
-          answer: "ghunnah",
-        },
-        {
-          id: "q2",
-          label: "2. Nun sakinah (نْ) bertemu huruf syin (ش) dalam kalimah مِن شَرِّ dibaca dengan cara:",
-          answer: "ikhfa",
-        },
+        { id: "q1", label: "1. Nun bertasydid (نّ) dalam kalimah ٱلنَّاسِ dibaca dengan cara:", answer: "ghunnah" },
+        { id: "q2", label: "2. Nun sakinah (نْ) bertemu huruf syin (ش) dalam kalimah مِن شَرِّ dibaca dengan cara:", answer: "ikhfa" },
       ],
       choices: [
+        { id: "ikhfa", label: "Sembunyikan bunyi nun sakinah (ن) ke dalam huruf syin (ش) dan dengung dua harakat." },
         { id: "ghunnah", label: "Ghunnah (dengung)" },
-        { id: "ikhfa",   label: "Ikhfa' (samar)" },
-        { id: "izhar",   label: "Izhar (jelas)" },
-        { id: "idgham",  label: "Idgham (masuk)" },
       ],
     },
-    // SOALAN 5 — tukar ikut kehendak kau
     {
-      arabic: "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ",
+      arabic: "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ(١) مَلِكِ ٱلنَّاسِ(٢) إِلَٰهِ ٱلنَّاسِ(٣) مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ(٤)",
       items: [
-        {
-          id: "q1",
-          label: "1. Lam mati (لْ) dalam kalimah ٱلۡوَسۡوَاسِ bertemu huruf wau (و) dibaca dengan cara:",
-          answer: "izhar",
-        },
-        {
-          id: "q2",
-          label: "2. Nun bertasydid (نّ) dalam kalimah ٱلۡخَنَّاسِ dibaca dengan cara:",
-          answer: "ghunnah",
-        },
+        { id: "q1", label: "1. Huruf ra' (ر) pada kalimah شَرِّ ٱلۡوَسۡوَاسِ dibaca dengan cara:", answer: "nipis" },
+        { id: "q2", label: "2. Huruf ra' (ر) pada kalimah بِرَبِّ dibaca dengan cara:", answer: "tebal" },
       ],
       choices: [
-        { id: "ghunnah", label: "Ghunnah (dengung)" },
-        { id: "ikhfa",   label: "Ikhfa' (samar)" },
-        { id: "izhar",   label: "Izhar (jelas)" },
-        { id: "idgham",  label: "Idgham (masuk)" },
+        { id: "nipis", label: "Huruf ra' (ر) dibaca nipis" },
+        { id: "tebal", label: "Huruf ra' (ر) dibaca tebal" },
       ],
     },
-    // SOALAN 6 — tukar ikut kehendak kau
     {
-      arabic: "ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ۝ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ",
+      arabic: "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ(١) مَلِكِ ٱلنَّاسِ(٢) إِلَٰهِ ٱلنَّاسِ(٣)",
       items: [
-        {
-          id: "q1",
-          label: "1. Nun bertasydid (نّ) dalam kalimah ٱلۡجِنَّةِ dibaca dengan cara:",
-          answer: "ghunnah",
-        },
-        {
-          id: "q2",
-          label: "2. Nun berbaris atas (نَ) dalam kalimah مِنَ bertemu alif (ا) dalam ٱلۡجِنَّةِ dibaca dengan cara:",
-          answer: "izhar",
-        },
+        { id: "q1", label: "1. Nun bertasydid (نّ) berbaris atas pada kalimah ٱلنَّاسِ apabila diwaqaf dibaca dengan cara:", answer: "mad" },
+        { id: "q2", label: "2. Huruf lam (ل) berbaris atas yang disusuli dengan huruf alif kecil (ٰ) pada kalimah إِلَٰهِ dibaca dengan cara:", answer: "harakat" },
       ],
       choices: [
-        { id: "ghunnah", label: "Ghunnah (dengung)" },
-        { id: "ikhfa",   label: "Ikhfa' (samar)" },
-        { id: "izhar",   label: "Izhar (jelas)" },
-        { id: "idgham",  label: "Idgham (masuk)" },
+        { id: "harakat", label: "Dipanjangkan dua harakat" },
+        { id: "mad", label: "Dipanjangkan 2/4/6 harakat kerana mad arid lissukun" },
       ],
     },
   ];
 
   const [currentQ, setCurrentQ] = useState(0);
-  const [dropped, setDropped]   = useState({});
+  const [dropped, setDropped] = useState({});
   const [dragging, setDragging] = useState(null);
-  const [checked, setChecked]   = useState(false);
-  const [score, setScore]       = useState(prevScore);
+  const [checked, setChecked] = useState(false);
+  const [score, setScore] = useState(prevScore);
   const [correctCount, setCorrectCount] = useState(0);
 
   const q = questions[currentQ];
 
-  function handleDragStart(choiceId) {
-    setDragging(choiceId);
-  }
+  function handleDragStart(choiceId) { setDragging(choiceId); }
 
   function handleDrop(itemId) {
     if (!dragging) return;
@@ -96,11 +63,7 @@ function DragGame() {
   }
 
   function handleRemove(itemId) {
-    setDropped((prev) => {
-      const next = { ...prev };
-      delete next[itemId];
-      return next;
-    });
+    setDropped((prev) => { const next = { ...prev }; delete next[itemId]; return next; });
   }
 
   function checkAnswers() {
@@ -119,101 +82,105 @@ function DragGame() {
       setChecked(false);
       setCorrectCount(0);
     } else {
-      navigate("/result", { state: { score } });
+      navigate("/result", { state: { score: score + 0, total: 9 } });
     }
   }
 
   const usedChoices = Object.values(dropped);
-  const isLastQuestion = currentQ === questions.length - 1;
 
   return (
     <div className="draggame-page">
-      <h1>🎮 SURAH AL-NAS</h1>
-      <h2>Soalan {currentQ + 4} / 6</h2>
-      <p className="instruction">Seret jawapan ke dalam kotak yang betul.</p>
 
-      <div className="arabic">{q.arabic}</div>
-
-      {q.items.map((item) => {
-        const val = dropped[item.id];
-        const choiceLabel = q.choices.find((c) => c.id === val)?.label;
-        const isCorrect = checked ? val === item.answer : null;
-
-        return (
-          <div key={item.id} className="drop-question">
-            <p className="question">{item.label}</p>
-            <div
-              className={`drop-zone ${val ? "filled" : ""} ${
-                checked ? (isCorrect ? "correct" : "wrong") : ""
-              }`}
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={() => handleDrop(item.id)}
-            >
-              {val ? (
-                <>
-                  <span>{choiceLabel}</span>
-                  {!checked && (
-                    <button className="remove-btn" onClick={() => handleRemove(item.id)}>✕</button>
-                  )}
-                </>
-              ) : (
-                <span className="placeholder">Lepaskan jawapan di sini...</span>
-              )}
-            </div>
-          </div>
-        );
-      })}
-
-      <div className="choices-pool">
-        <p className="pool-label">Pilihan jawapan:</p>
-        <div className="chips">
-          {q.choices.map((choice) => (
-            <div
-              key={choice.id}
-              className={`chip ${usedChoices.includes(choice.id) ? "used" : ""}`}
-              draggable={!usedChoices.includes(choice.id)}
-              onDragStart={() => handleDragStart(choice.id)}
-            >
-              {choice.label}
-            </div>
-          ))}
-        </div>
+      <div className="game-header">
+        <img src={logo} alt="Logo" className="game-logo" />
+        <h1>SURAH AL-NAS</h1>
       </div>
 
-      {/* RESULT MESSAGE */}
-      {checked && (
-        <div className={`result-msg ${correctCount === q.items.length ? "correct" : "wrong"}`}>
-          {correctCount === q.items.length
-            ? "✅ Tahniah! Semua jawapan betul!"
-            : `❌ ${correctCount}/${q.items.length} betul. Kotak merah = jawapan salah.`}
+      <div className="game-card">
+
+        <div className="soalan-badge">
+          Soalan {currentQ + 4} / 6
         </div>
-      )}
 
-      {/* BUTTON: tukar antara Semak / Seterusnya */}
-      {!checked ? (
-        <button className="submit-btn" onClick={checkAnswers}>
-          Semak Jawapan
-        </button>
-      ) : (
-        <button className="submit-btn" onClick={nextQuestion}>
-          {isLastQuestion ? "Lihat Keputusan ➜" : "Soalan Seterusnya ➜"}
-        </button>
-      )}
+        <div className="arabic">{q.arabic}</div>
 
-      <h3>Markah semasa: {score}</h3>
+        <p className="instruction">Seret jawapan ke dalam kotak yang betul.</p>
 
-      <button className="back-btn" onClick={() => navigate("/game")}>
-        ← Kembali
-      </button>
+        {q.items.map((item) => {
+          const val = dropped[item.id];
+          const choiceLabel = q.choices.find((c) => c.id === val)?.label;
+          const isCorrect = checked ? val === item.answer : null;
+
+          return (
+            <div key={item.id} className="drop-question">
+              <p className="question">{item.label}</p>
+              <div
+                className={`drop-zone ${val ? "filled" : ""} ${checked ? (isCorrect ? "correct" : "wrong") : ""}`}
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={() => handleDrop(item.id)}
+              >
+                {val ? (
+                  <>
+                    <span>{choiceLabel}</span>
+                    {!checked && (
+                      <button className="remove-btn" onClick={() => handleRemove(item.id)}>✕</button>
+                    )}
+                  </>
+                ) : (
+                  <span className="placeholder">Lepaskan jawapan di sini...</span>
+                )}
+              </div>
+            </div>
+          );
+        })}
+
+        <div className="choices-pool">
+          <p className="pool-label">Pilihan jawapan:</p>
+          <div className="chips">
+            {q.choices.map((choice) => (
+              <div
+                key={choice.id}
+                className={`chip ${usedChoices.includes(choice.id) ? "used" : ""}`}
+                draggable={!usedChoices.includes(choice.id)}
+                onDragStart={() => handleDragStart(choice.id)}
+              >
+                {choice.label}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {checked && (
+          <div className={`result-msg ${correctCount === q.items.length ? "betul" : "salah"}`}>
+            {correctCount === q.items.length
+              ? "✅ Tahniah! Semua jawapan betul!"
+              : `❌ ${correctCount}/${q.items.length} betul. Kotak merah = jawapan salah.`}
+          </div>
+        )}
+
+        {!checked ? (
+          <button className="submit-btn" onClick={checkAnswers}>Semak Jawapan</button>
+        ) : (
+          <button className="submit-btn" onClick={nextQuestion}>
+            {currentQ === questions.length - 1 ? "Lihat Keputusan ➜" : "Soalan Seterusnya ➜"}
+          </button>
+        )}
+
+        <p className="score-display">Markah semasa: {score}</p>
+
+      </div>
+
+      <button className="back-btn" onClick={() => navigate("/game")}>← Kembali</button>
+
+      <div className="bottom-nav">
+        <FaHome onClick={() => navigate("/dashboard")} />
+        <FaBookOpen />
+        <FaInfoCircle />
+        <FaQuestionCircle />
+      </div>
+
     </div>
   );
-
-  navigate("/result", {
-  state: {
-    score: score,
-    total: 9  // 3 soalan betul/salah (1 markah each) + 3 soalan drag (2 markah each)
-  }
-});
 }
 
 export default DragGame;

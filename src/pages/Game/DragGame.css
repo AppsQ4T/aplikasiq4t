@@ -1,55 +1,90 @@
 .draggame-page {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  font-family: sans-serif;
-  background-color: #f4f9f4;
   min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: #1a5c2a;
-  text-align: center;
+.game-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-h2, h3 {
-  text-align: center;
-  color: #2e7d32;
+.game-logo {
+  width: 70px;
+  height: auto;
 }
 
-.instruction {
+.game-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
+}
+
+.game-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.soalan-badge {
+  background: #0f9444;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 20px;
   text-align: center;
-  color: #555;
-  margin-bottom: 1.5rem;
+  align-self: center;
 }
 
 .arabic {
-  background-color: #1a5c2a;
+  background: #1a5c2a;
   color: white;
-  text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   direction: rtl;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  line-height: 2.2;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 2;
 }
 
-.drop-question {
-  margin-bottom: 1.2rem;
+.instruction {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 0;
 }
+
+.drop-question { width: 100%; }
 
 .question {
-  font-size: 15px;
+  font-size: 14px;
   color: #333;
-  margin-bottom: 6px;
+  margin: 0 0 6px 0;
+  line-height: 1.5;
 }
 
-/* KOTAK DROP */
 .drop-zone {
-  background-color: #c8e6c9;
+  background: #c8e6c9;
   border: 2px dashed #388e3c;
-  border-radius: 8px;
+  border-radius: 10px;
   min-height: 48px;
   padding: 10px 14px;
   font-size: 14px;
@@ -61,21 +96,20 @@ h2, h3 {
 }
 
 .drop-zone.filled {
-  background-color: #e8f5e9;
+  background: #e8f5e9;
   border-style: solid;
   border-color: #2e7d32;
   color: #1b5e20;
   font-weight: 600;
 }
 
-/* SELEPAS SEMAK */
 .drop-zone.correct {
-  background-color: #a5d6a7;
+  background: #a5d6a7;
   border-color: #1b5e20;
 }
 
 .drop-zone.wrong {
-  background-color: #ffcdd2;
+  background: #ffcdd2;
   border-color: #c62828;
   color: #b71c1c;
 }
@@ -86,23 +120,22 @@ h2, h3 {
 }
 
 .remove-btn {
-  background: none;
-  border: none;
-  color: #c62828;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 0 4px;
+  background: none !important;
+  border: none !important;
+  color: #c62828 !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  padding: 0 4px !important;
+  width: auto !important;
 }
 
-/* PILIHAN JAWAPAN */
-.choices-pool {
-  margin-top: 1.5rem;
-}
+.choices-pool { width: 100%; }
 
 .pool-label {
   font-size: 13px;
-  color: #666;
-  margin-bottom: 8px;
+  color: #555;
+  margin: 0 0 8px 0;
+  font-weight: 600;
 }
 
 .chips {
@@ -112,71 +145,91 @@ h2, h3 {
 }
 
 .chip {
-  background-color: #1a5c2a;
+  background: #1a5c2a;
   color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
   cursor: grab;
-  font-size: 14px;
+  font-size: 13px;
   user-select: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, transform 0.15s;
 }
+
+.chip:hover { transform: scale(1.03); }
 
 .chip.used {
   opacity: 0.3;
   pointer-events: none;
 }
 
-/* RESULT MESSAGE */
 .result-msg {
-  margin-top: 1rem;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
 }
 
-.result-msg.correct {
-  background-color: #e8f5e9;
-  color: #1b5e20;
-}
+.result-msg.betul { background: #e8f5e9; color: #1b5e20; }
+.result-msg.salah { background: #ffebee; color: #b71c1c; }
 
-.result-msg.wrong {
-  background-color: #ffebee;
-  color: #b71c1c;
-}
-
-/* BUTTON */
 .submit-btn {
-  display: block;
-  margin: 1.5rem auto 0;
-  background-color: #1a5c2a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 30px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
+  width: 100% !important;
+  background: #0f9444 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
 }
 
-.submit-btn:hover {
-  background-color: #145220;
+.submit-btn:hover { background: #0a6d35 !important; }
+
+.score-display {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 0;
 }
 
 .back-btn {
-  display: block;
-  margin: 1rem auto 0;
-  background: none;
-  border: 1px solid #1a5c2a;
-  color: #1a5c2a;
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 14px;
+  display: inline-block !important;
+  width: fit-content !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 10px 40px !important;
+  background: transparent;
+  border: 2px solid #0b7a39;
+  color: #0b7a39;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover { background: #0b7a39; color: white; }
+
+.bottom-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
   cursor: pointer;
 }
 
-.back-btn:hover {
-  background-color: #e8f5e9;
+.bottom-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
 }

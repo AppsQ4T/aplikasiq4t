@@ -1,27 +1,65 @@
-function Pertengahan(){
+import "./Pertengahan.css";
+import { useNavigate } from "react-router-dom";
+import { FaBookOpen, FaInfoCircle, FaQuestionCircle, FaHome } from "react-icons/fa";
+import logo from "../../../images/logo.png";
 
-return(
+function Pertengahan() {
+  const navigate = useNavigate();
 
-<div style={{
+  return (
+    <div className="pertengahan-page">
 
-display:"flex",
+      <div className="pertengahan-header">
+        <img src={logo} alt="Logo Q4T" className="pertengahan-logo" />
+        <h1>TILAWAH - PERTENGAHAN</h1>
+      </div>
 
-justifyContent:"center",
+      <h3>Pilih Surah</h3>
 
-alignItems:"center",
+      <select>
+        <option>Al-Lail</option>
+     {/*   <option>Al-Falaq</option> */}
+      {/*  <option>Al-Ikhlas</option> */}
+      </select>
 
-height:"100vh",
+        <div className="menu">
 
-fontSize:"40px"
+        <button className="menu-btn" onClick={() => navigate("/video", { state: { surah: "allail" } })}>
+  📹 Video
+</button>
 
-}}>
+        <button className="menu-btn" onClick={() => navigate("/audio", { state: { surah: "allail" } })}>
+          🎧 Audio
+        </button>
 
-Tilawah Pertengahan
+        <button className="menu-btn" onClick={() => navigate("/Enota", { state: { surah: "allail" } })}>
+          📄 NotaQu
+        </button>
 
+        <button className="menu-btn" onClick={() => navigate("/gameP")}>
+          🎮 Uji Minda
+        </button>
+
+      </div>
+
+      <div className="back-container">
+  <button
+    className="back-btn"
+    onClick={() => navigate("/tilawah")}
+  >
+    ← Kembali
+  </button>
 </div>
 
-)
+      <div className="bottom-nav">
+        <FaHome onClick={() => navigate("/dashboard")} title="Home" />
+        <FaBookOpen onClick={() => navigate("/askexpert")} title="Tanya Pakar" />
+        <FaInfoCircle onClick={() => navigate("/about")} title="Info" />
+        <FaQuestionCircle onClick={() => navigate("/help")} title="Bantuan" />
+      </div>
 
+    </div>
+  );
 }
 
 export default Pertengahan;
