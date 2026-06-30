@@ -5,39 +5,71 @@ import { FaBookOpen, FaInfoCircle, FaQuestionCircle, FaHome } from "react-icons/
 import logo from "../../images/logo.png";
 
 const enotaData = {
-  // ASAS
   alnas:    { title: "Surah Al-Nas",    pages: ["/enota/alnas/1.jpg"] },
   alfalaq:  { title: "Surah Al-Falaq",  pages: ["/enota/alfalaq/1.png"] },
   alikhlas: { title: "Surah Al-Ikhlas", pages: ["/enota/alikhlas/1.png"] },
-  // tambah lain2 nanti
-
-  // PERTENGAHAN
-  allail: { title: "Surah Al-Lail", pages: ["/enota/allail/1.jpg", "/enota/allail/2.jpg", "/enota/allail/3.jpg"] },
-  // tambah lain2 nanti
-
-  // LANJUTAN
+  allail:   { title: "Surah Al-Lail",   pages: ["/enota/allail/1.jpg", "/enota/allail/2.jpg", "/enota/allail/3.jpg"] },
   alsajdah: { title: "Surah Al-Sajdah", pages: ["/enota/alsajdah/1.png"] },
-  yasin: { title: "Surah Yasin", pages: ["/enota/yasin/1.jpg", "/enota/yasin/2.jpg", "/enota/yasin/3.jpg", "/enota/yasin/4.jpg", "/enota/yasin/5.jpg", "/enota/yasin/6.jpg", "/enota/yasin/7.jpg", "/enota/yasin/8.jpg", "/enota/yasin/9.jpg", 
-    "/enota/yasin/10.jpg", "/enota/yasin/11.jpg", "/enota/yasin/12.jpg", "/enota/yasin/13.jpg", "/enota/yasin/14.jpg", "/enota/yasin/15.jpg"]
-  },
-  // tambah lain2 nanti
+  yasin:    { title: "Surah Yasin",     pages: Array.from({length: 15}, (_, i) => `/enota/yasin/${i+1}.jpg`) },
+};
+
+// fail 1.jpg huruf kecil, selebihnya .JPG huruf besar
+const makePagesTajwid = (folder, count) =>
+  Array.from({length: count}, (_, i) => {
+    const num = i + 1;
+    const ext = num === 1 ? "jpg" : "JPG";
+    return `/enota/${folder}/${num}.${ext}`;
+  });
+
+// semua huruf kecil .jpg
+const makePagesLower = (folder, count) =>
+  Array.from({length: count}, (_, i) => `/enota/${folder}/${i+1}.jpg`);
+
+const enotaDataTajwid = {
+  alnas:  { title: "Surah Al-Nas",  pages: makePagesTajwid("tajwidalnas", 7) },
+  allail: { title: "Surah Al-Lail ", pages: makePagesTajwid("tajwidallail", 22) },
+  yasin:  { title: "Surah Yasin ",   pages: makePagesTajwid("tajwidyasin", 110) },
+};
+
+const enotaDataTahfiz = {
+  alnas:  { title: "Surah Al-Nas",  pages: makePagesLower("tahfizalnas", 2) },
+  allail: { title: "Surah Al-Lail", pages: makePagesLower("tahfizallail", 3) },
+  yasin:  { title: "Surah Yasin",   pages: makePagesLower("tahfizyasin", 7) },
+};
+
+const enotaDataTafsir = {
+  alnas:  { title: "Surah Al-Nas",  pages: makePagesLower("tafsiralnas", 5) },
+  allail: { title: "Surah Al-Lail", pages: makePagesLower("tafsirallail", 5) },
+  yasin:  { title: "Surah Yasin",   pages: makePagesLower("tafsiryasin", 14) },
 };
 
 function Enota() {
   const navigate = useNavigate();
   const location = useLocation();
   const surah = location.state?.surah || "alnas";
-  const currentNota = enotaData[surah] || enotaData["alnas"];
+  const modul = location.state?.modul || "tilawah";
+
+  const currentNota =
+    modul === "tajwid" ? enotaDataTajwid[surah] || enotaDataTajwid["alnas"] :
+    modul === "tahfiz" ? enotaDataTahfiz[surah] || enotaDataTahfiz["alnas"] :
+    modul === "tafsir" ? enotaDataTafsir[surah] || enotaDataTafsir["alnas"] :
+    enotaData[surah] || enotaData["alnas"];
 
   const [currentPage, setCurrentPage] = useState(0);
   const [zoom, setZoom] = useState(1);
+
+  const modulLabel = {
+    tajwid: "TAJWID",
+    tahfiz: "TAHFIZ",
+    tafsir: "TAFSIR",
+  };
 
   return (
     <div className="nota-page">
 
       <div className="nota-header">
         <img src={logo} alt="Logo" className="nota-logo" />
-        <h1>TILAWAH - READ/WRITE</h1>
+        <h1>{modulLabel[modul] ? `${modulLabel[modul]} - READ/WRITE` : "TILAWAH - READ/WRITE"}</h1>
       </div>
 
       <h2>{currentNota.title}</h2>

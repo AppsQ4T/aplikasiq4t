@@ -6,62 +6,68 @@ import logo from "../../images/logo.png";
 
 const audioData = {
   // ASAS
-  alnas:      { title: "Surah Al-Nas",      file: "/audio/alnas.MP3" },       // ✅ ada
-  alfalaq:    { title: "Surah Al-Falaq",    file: "/audio/alfalaq.MP3" },     // ✅ ada
-  alikhlas:   { title: "Surah Al-Ikhlas",   file: "/audio/alikhlas.MP3" },    // ✅ ada
-  almasad:    { title: "Surah Al-Masad",    file: "/audio/almasad.mp3" },     // ⏳ belum
-  alnasr:     { title: "Surah Al-Nasr",     file: "/audio/alnasr.mp3" },      // ⏳ belum
-  alkafirun:  { title: "Surah Al-Kafirun",  file: "/audio/alkafirun.mp3" },   // ⏳ belum
-  alkauthar:  { title: "Surah Al-Kauthar",  file: "/audio/alkauthar.mp3" },   // ⏳ belum
-  almaun:     { title: "Surah Al-Maun",     file: "/audio/almaun.mp3" },      // ⏳ belum
-  quraisy:    { title: "Surah Quraisy",     file: "/audio/quraisy.mp3" },     // ⏳ belum
-  alfil:      { title: "Surah Al-Fil",      file: "/audio/alfil.mp3" },       // ⏳ belum
-  alhumazah:  { title: "Surah Al-Humazah",  file: "/audio/alhumazah.mp3" },   // ⏳ belum
-  alasr:      { title: "Surah Al-Asr",      file: "/audio/alasr.mp3" },       // ⏳ belum
-  altakathur: { title: "Surah Al-Takathur", file: "/audio/altakathur.mp3" },  // ⏳ belum
-  alqariah:   { title: "Surah Al-Qariah",   file: "/audio/alqariah.mp3" },    // ⏳ belum
-  aladiyat:   { title: "Surah Al-Adiyat",   file: "/audio/aladiyat.mp3" },    // ⏳ belum
-  alzalzalah: { title: "Surah Al-Zalzalah", file: "/audio/alzalzalah.mp3" },  // ⏳ belum
-  albayyinah: { title: "Surah Al-Bayyinah", file: "/audio/albayyinah.mp3" },  // ⏳ belum
-  alqadr:     { title: "Surah Al-Qadr",     file: "/audio/alqadr.mp3" },      // ⏳ belum
-  alalaq:     { title: "Surah Al-Alaq",     file: "/audio/alalaq.mp3" },      // ⏳ belum
-  altin:      { title: "Surah Al-Tin",      file: "/audio/altin.mp3" },       // ⏳ belum
-  alinsyirah: { title: "Surah Al-Insyirah", file: "/audio/alinsyirah.mp3" },  // ⏳ belum
-  alduha:     { title: "Surah Al-Duha",     file: "/audio/alduha.mp3" },      // ⏳ belum
+  alnas:      { title: "Surah Al-Nas",      file: "/audio/alnas.MP3" },
+  alfalaq:    { title: "Surah Al-Falaq",    file: "/audio/alfalaq.MP3" },
+  alikhlas:   { title: "Surah Al-Ikhlas",   file: "/audio/alikhlas.MP3" },
+  almasad:    { title: "Surah Al-Masad",    file: "/audio/almasad.mp3" },
+  alnasr:     { title: "Surah Al-Nasr",     file: "/audio/alnasr.mp3" },
+  alkafirun:  { title: "Surah Al-Kafirun",  file: "/audio/alkafirun.mp3" },
+  alkauthar:  { title: "Surah Al-Kauthar",  file: "/audio/alkauthar.mp3" },
+  almaun:     { title: "Surah Al-Maun",     file: "/audio/almaun.mp3" },
+  quraisy:    { title: "Surah Quraisy",     file: "/audio/quraisy.mp3" },
+  alfil:      { title: "Surah Al-Fil",      file: "/audio/alfil.mp3" },
+  alhumazah:  { title: "Surah Al-Humazah",  file: "/audio/alhumazah.mp3" },
+  alasr:      { title: "Surah Al-Asr",      file: "/audio/alasr.mp3" },
+  altakathur: { title: "Surah Al-Takathur", file: "/audio/altakathur.mp3" },
+  alqariah:   { title: "Surah Al-Qariah",   file: "/audio/alqariah.mp3" },
+  aladiyat:   { title: "Surah Al-Adiyat",   file: "/audio/aladiyat.mp3" },
+  alzalzalah: { title: "Surah Al-Zalzalah", file: "/audio/alzalzalah.mp3" },
+  albayyinah: { title: "Surah Al-Bayyinah", file: "/audio/albayyinah.mp3" },
+  alqadr:     { title: "Surah Al-Qadr",     file: "/audio/alqadr.mp3" },
+  alalaq:     { title: "Surah Al-Alaq",     file: "/audio/alalaq.mp3" },
+  altin:      { title: "Surah Al-Tin",      file: "/audio/altin.mp3" },
+  alinsyirah: { title: "Surah Al-Insyirah", file: "/audio/alinsyirah.mp3" },
+  alduha:     { title: "Surah Al-Duha",     file: "/audio/alduha.mp3" },
+  allail:       { title: "Surah Al-Lail",       file: "/audio/allail.MP3" },
+  alsyams:      { title: "Surah Al-Syams",      file: "/audio/alsyams.MP3" },
+  albalad:      { title: "Surah Al-Balad",      file: "/audio/albalad.MP3" },
+  alfajr:       { title: "Surah Al-Fajr",       file: "/audio/alfajr.mp3" },
+  alghasyiah:   { title: "Surah Al-Ghasyiah",   file: "/audio/alghasyiah.mp3" },
+  alala:        { title: "Surah Al-A'la",       file: "/audio/alala.mp3" },
+  altariq:      { title: "Surah Al-Tariq",      file: "/audio/altariq.mp3" },
+  alburuj:      { title: "Surah Al-Buruj",      file: "/audio/alburuj.mp3" },
+  alinsyiqaq:   { title: "Surah Al-Insyiqaq",   file: "/audio/alinsyiqaq.mp3" },
+  almutaffifin: { title: "Surah Al-Mutaffifin", file: "/audio/almutaffifin.mp3" },
+  alinfitar:    { title: "Surah Al-Infitar",    file: "/audio/alinfitar.mp3" },
+  altakwir:     { title: "Surah Al-Takwir",     file: "/audio/altakwir.mp3" },
+  abasa:        { title: "Surah Abasa",         file: "/audio/abasa.mp3" },
+  alnaziat:     { title: "Surah Al-Naziat",     file: "/audio/alnaziat.mp3" },
+  alnaba:       { title: "Surah Al-Naba",       file: "/audio/alnaba.mp3" },
+  alsajdah:  { title: "Surah Al-Sajdah",  file: "/audio/alsajdah.MP3" },
+  yasin:     { title: "Surah Yasin",      file: "/audio/yasin.MP3" },
+  aldukhan:  { title: "Surah Al-Dukhan",  file: "/audio/aldukhan.MP3" },
+  alwaqiah:  { title: "Surah Al-Waqiah",  file: "/audio/alwaqiah.mp3" },
+  alsaff:    { title: "Surah Al-Saff",    file: "/audio/alsaff.mp3" },
+  aljumuah:  { title: "Surah Al-Jumuah",  file: "/audio/aljumuah.mp3" },
+  almulk:    { title: "Surah Al-Mulk",    file: "/audio/almulk.mp3" },
+  alinsan:   { title: "Surah Al-Insan",   file: "/audio/alinsan.mp3" },
+};
 
-  // PERTENGAHAN
-  allail:       { title: "Surah Al-Lail",       file: "/audio/allail.MP3" },      // ✅ ada
-  alsyams:      { title: "Surah Al-Syams",      file: "/audio/alsyams.MP3" },     // ✅ ada
-  albalad:      { title: "Surah Al-Balad",      file: "/audio/albalad.MP3" },     // ✅ ada
-  alfajr:       { title: "Surah Al-Fajr",       file: "/audio/alfajr.mp3" },      // ⏳ belum
-  alghasyiah:   { title: "Surah Al-Ghasyiah",   file: "/audio/alghasyiah.mp3" },  // ⏳ belum
-  alala:        { title: "Surah Al-A'la",       file: "/audio/alala.mp3" },       // ⏳ belum
-  altariq:      { title: "Surah Al-Tariq",      file: "/audio/altariq.mp3" },     // ⏳ belum
-  alburuj:      { title: "Surah Al-Buruj",      file: "/audio/alburuj.mp3" },     // ⏳ belum
-  alinsyiqaq:   { title: "Surah Al-Insyiqaq",   file: "/audio/alinsyiqaq.mp3" },  // ⏳ belum
-  almutaffifin: { title: "Surah Al-Mutaffifin", file: "/audio/almutaffifin.mp3" },// ⏳ belum
-  alinfitar:    { title: "Surah Al-Infitar",    file: "/audio/alinfitar.mp3" },   // ⏳ belum
-  altakwir:     { title: "Surah Al-Takwir",     file: "/audio/altakwir.mp3" },    // ⏳ belum
-  abasa:        { title: "Surah Abasa",         file: "/audio/abasa.mp3" },       // ⏳ belum
-  alnaziat:     { title: "Surah Al-Naziat",     file: "/audio/alnaziat.mp3" },    // ⏳ belum
-  alnaba:       { title: "Surah Al-Naba",       file: "/audio/alnaba.mp3" },      // ⏳ belum
-
-  // LANJUTAN
-  alsajdah:  { title: "Surah Al-Sajdah",  file: "/audio/alsajdah.MP3" },  // ✅ ada
-  yasin:     { title: "Surah Yasin",      file: "/audio/yasin.MP3" },     // ✅ ada
-  aldukhan:  { title: "Surah Al-Dukhan",  file: "/audio/aldukhan.MP3" },  // ✅ ada
-  alwaqiah:  { title: "Surah Al-Waqiah",  file: "/audio/alwaqiah.mp3" },  // ⏳ belum
-  alsaff:    { title: "Surah Al-Saff",    file: "/audio/alsaff.mp3" },    // ⏳ belum
-  aljumuah:  { title: "Surah Al-Jumuah",  file: "/audio/aljumuah.mp3" },  // ⏳ belum
-  almulk:    { title: "Surah Al-Mulk",    file: "/audio/almulk.mp3" },    // ⏳ belum
-  alinsan:   { title: "Surah Al-Insan",   file: "/audio/alinsan.mp3" },   // ⏳ belum
+const audioDataTajwid = {
+  alnas:  { title: "Surah Al-Nas",  file: "/audio/alnas.MP3" },
+  allail: { title: "Surah Al-Lail", file: "/audio/allail.MP3" },
+  yasin:  { title: "Surah Yasin ",   file: "/audio/yasin.MP3" },
 };
 
 function Audio() {
   const navigate = useNavigate();
   const location = useLocation();
   const surah = location.state?.surah || "alnas";
-  const currentAudio = audioData[surah] || audioData["alnas"];
+  const modul = location.state?.modul || "tilawah";
+
+  const currentAudio = modul === "tajwid"
+    ? audioDataTajwid[surah] || audioDataTajwid["alnas"]
+    : audioData[surah] || audioData["alnas"];
 
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
@@ -70,31 +76,20 @@ function Audio() {
   const [volume, setVolume] = useState(1);
 
   function togglePlay() {
-    if (playing) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
+    if (playing) { audioRef.current.pause(); }
+    else { audioRef.current.play(); }
     setPlaying(!playing);
   }
 
-  function onTimeUpdate() {
-    setCurrent(audioRef.current.currentTime);
-  }
-
-  function onLoaded() {
-    setDuration(audioRef.current.duration);
-  }
+  function onTimeUpdate() { setCurrent(audioRef.current.currentTime); }
+  function onLoaded() { setDuration(audioRef.current.duration); }
 
   function onSeek(e) {
     audioRef.current.currentTime = e.target.value;
     setCurrent(Number(e.target.value));
   }
 
-  function onEnded() {
-    setPlaying(false);
-    setCurrent(0);
-  }
+  function onEnded() { setPlaying(false); setCurrent(0); }
 
   function restart() {
     audioRef.current.currentTime = 0;
@@ -131,14 +126,20 @@ function Audio() {
     return "🔊";
   }
 
-  return (
-    <div className="audio-page">
-
-      <div className="audio-header">
-        <img src={logo} alt="Logo" className="audio-logo" />
-        <h1>TILAWAH - AURAL</h1>
-      </div>
-
+   const modulLabel = {
+      tajwid: "TAJWID",
+      tahfiz: "TAHFIZ",
+      tafsir: "TAFSIR",
+    };
+  
+    return (
+      <div className="nota-page">
+  
+        <div className="nota-header">
+          <img src={logo} alt="Logo" className="nota-logo" />
+          <h1>{modulLabel[modul] ? `${modulLabel[modul]} - AURAL` : "TILAWAH - AURAL"}</h1>
+        </div>
+  
       <h2>{currentAudio.title}</h2>
 
       <div className="player-card">
@@ -177,7 +178,6 @@ function Audio() {
             {playing ? "⏸" : "▶"}
           </button>
           <button className="ctrl-btn" onClick={skipForward} title="+10s">⏭</button>
-
           <div className="volume-wrap">
             <span className="vol-icon">{volumeIcon()}</span>
             <input

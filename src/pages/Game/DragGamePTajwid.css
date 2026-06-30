@@ -1,0 +1,206 @@
+.draggameptajwid-page {
+  min-height: 100vh;
+  background-image: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+.draggameptajwid-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.draggameptajwid-logo { width: 70px; height: auto; }
+
+.draggameptajwid-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #0f5c2a;
+  letter-spacing: 2px;
+}
+
+.draggameptajwid-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.draggameptajwid-badge {
+  background: #0f9444;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.draggameptajwid-instruction {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+.dropzones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zone-label {
+  font-size: 13px;
+  color: #555;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.dropzone {
+  background: #c8e6c9;
+  border: 2px dashed #388e3c;
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+  direction: rtl;
+}
+
+.dropzone.filled { background: #e8f5e9; border-style: solid; border-color: #2e7d32; color: #1b5e20; font-weight: 600; }
+.dropzone.correct { background: #a5d6a7; border-color: #1b5e20; }
+.dropzone.wrong { background: #ffcdd2; border-color: #c62828; color: #b71c1c; }
+
+.zone-num { font-weight: 700; color: #0f5c2a; direction: ltr; min-width: 20px; }
+
+.zone-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.zone-text { flex: 1; }
+
+.placeholder { color: #aaa; font-size: 13px; direction: ltr; }
+
+.remove-btn {
+  background: none !important;
+  border: none !important;
+  color: #c62828 !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  padding: 0 4px !important;
+  width: auto !important;
+}
+
+.pool-zone { width: 100%; }
+
+.pool-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pool-item {
+  background: #1a5c2a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: grab;
+  font-size: 14px;
+  user-select: none;
+  transition: opacity 0.2s, transform 0.15s;
+  direction: rtl;
+}
+
+.pool-item:hover { transform: scale(1.03); }
+
+.draggameptajwid-result {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.draggameptajwid-result.betul { background: #e8f5e9; color: #1b5e20; }
+.draggameptajwid-result.salah { background: #ffebee; color: #b71c1c; }
+
+.draggameptajwid-submit {
+  width: 100% !important;
+  background: #0f9444 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+}
+
+.draggameptajwid-submit:hover { background: #0a6d35 !important; }
+
+.draggameptajwid-score { font-size: 14px; color: #666; text-align: center; margin: 0; }
+
+.draggameptajwid-back {
+  display: inline-block !important;
+  width: fit-content !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 10px 40px !important;
+  background: transparent !important;
+  border: 2px solid #0b7a39 !important;
+  color: #0b7a39 !important;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.draggameptajwid-back:hover { background: #0b7a39 !important; color: white !important; }
+
+.draggameptajwid-nav {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  background: #0f9444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 26px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.draggameptajwid-nav svg:hover {
+  color: #ffe600;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
