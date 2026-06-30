@@ -60,9 +60,9 @@ const audioDataTajwid = {
 };
 
 const audioDataTafsir = {
-  alnas:  { title: "Surah Al-Nas - Tafsir",  file: "/audio/audiotafsir/tafsiralnas.MP3" },
-  allail: { title: "Surah Al-Lail - Tafsir", file: "/audio/audiotafsir/tafsirallail.MP3" },
-  yasin:  { title: "Surah Yasin - Tafsir",   file: "/audio/audiotafsir/tafsiryasin.MP3" },
+  alnas:  { title: "Surah Al-Nas ",  file: "/audio/audiotafsir/tafsiralnas.MP3" },
+  allail: { title: "Surah Al-Lail", file: "/audio/audiotafsir/tafsirallail.MP3" },
+  yasin:  { title: "Surah Yasin",   file: "/audio/audiotafsir/tafsiryasin.MP3" },
 };
 
 function Audio() {
