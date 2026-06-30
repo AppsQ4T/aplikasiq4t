@@ -59,15 +59,22 @@ const audioDataTajwid = {
   yasin:  { title: "Surah Yasin ",   file: "/audio/yasin.MP3" },
 };
 
+const audioDataTafsir = {
+  alnas:  { title: "Surah Al-Nas - Tafsir",  file: "/audio/audiotafsir/tafsiralnas.MP3" },
+  allail: { title: "Surah Al-Lail - Tafsir", file: "/audio/audiotafsir/tafsirallail.MP3" },
+  yasin:  { title: "Surah Yasin - Tafsir",   file: "/audio/audiotafsir/tafsiryasin.MP3" },
+};
+
 function Audio() {
   const navigate = useNavigate();
   const location = useLocation();
   const surah = location.state?.surah || "alnas";
   const modul = location.state?.modul || "tilawah";
 
-  const currentAudio = modul === "tajwid"
-    ? audioDataTajwid[surah] || audioDataTajwid["alnas"]
-    : audioData[surah] || audioData["alnas"];
+const currentAudio =
+  modul === "tajwid" ? audioDataTajwid[surah] || audioDataTajwid["alnas"] :
+  modul === "tafsir" ? audioDataTafsir[surah] || audioDataTafsir["alnas"] :
+  audioData[surah] || audioData["alnas"];
 
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
